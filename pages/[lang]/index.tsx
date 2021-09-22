@@ -44,7 +44,14 @@ const Home = (props: Prop) => {
       ></PageHeadMobile>
       <h3>{langs.title}</h3>
       <p>{langs.desc}</p>
+      <p>Support i18n images(default png):</p>
       <div className={styles.img}></div>
+      <p className={styles.supportWebp}>I Support webp</p>
+      <p className={styles.notSupportWebp}>I does not support webp</p>
+      <p> Prefer use Webp format image,if support:</p>
+      <div
+        className={classNameCombine([styles.img, styles.imgPreferWebp])}
+      ></div>
     </div>
   );
 };

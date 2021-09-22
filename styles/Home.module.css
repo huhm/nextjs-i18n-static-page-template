@@ -8,15 +8,37 @@
   height: 100vh;
 }
 
-.img {
+.img,
+.imgPreferWebp {
   width: 120px;
   height: 105px;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  /* can add default image here: 
+  background-image: url("../assets/home/demo-en.png");
+  */
 }
 .en .img {
   background-image: url("../assets/home/demo-en.png");
 }
 .fa .img {
   background-image: url("../assets/home/demo-fa.png");
+}
+.supportWebp,
+.notSupportWebp {
+  display: none;
+  color: #515df1;
+}
+:global(.webp) .supportWebp {
+  display: block;
+}
+:global(.nowebp) .notSupportWebp {
+  display: block;
+}
+
+:global(.webp) .en .imgPreferWebp {
+  background-image: url("../assets/home/demo-en.webp");
+}
+:global(.webp) .fa .imgPreferWebp {
+  background-image: url("../assets/home/demo-fa.webp");
 }

@@ -13,7 +13,7 @@ interface Props {
   dir: "ltr" | "rtl";
 }
 // if support Webp，html will has 'webp' className
-const __SCRIPT_SUPPORT_WEBP_CLASS = `if(!![].map &&typeof window !== "undefined" &&window.document.createElement("canvas").toDataURL("image/webp").indexOf("data:image/webp") === 0){docCList.push('webp');}`;
+const __SCRIPT_SUPPORT_WEBP_CLASS = `if(!![].map &&typeof window !== "undefined" &&window.document.createElement("canvas").toDataURL("image/webp").indexOf("data:image/webp") === 0){docCList.push('webp');}else{docCList.push('nowebp');}`;
 
 /**
  * PageHead for mobile
