@@ -13,3 +13,26 @@
   + Auto Register Routing to redirect to Internationalized Routing  `pages/[[...langPaths]].tsx`
 
 > Note: This project does not use any i18n library. If you need  you can import it yourself according to your needs, and register the i18n data in the page according to props.langs.
+
+## Build Script
+
+``` bash
+# use npm / yarn
+npm install
+npm run gen
+```
+
+This demo will generator pages:
+
++ `index.html` will auto redirect to `/en` or `fa`
++ `Page2.html`  will auto redirect to `/en/Page2` or `fa/Page2`
++ `subfolder`
+  + `Page3.html`  will auto redirect to `/en/subfolder/Page3` or `fa/subfolder/Page3`
++ `en.html`
++ `fa.html`
++ `en`
+  + `subfolder/Page3.html`
+  + `Page2.html`
++ `fa`
+  + `subfolder/Page3.html`
+  + `Page2.html`

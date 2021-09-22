@@ -14,3 +14,27 @@
   + `pages/[[...langPaths]].tsx` 自动注册不带多语言子路由的路由,将根据浏览器的navigator.language自动跳转
 
 > 注： 当前模板未使用多语言库，如需引入，可根据需要自行引入，并在页面中根据props.langs自行注册多语言数据
+
+## Build Script
+
+``` bash
+# use npm / yarn
+npm install
+npm run gen
+```
+
+当前示例生成的静态文件为:
+
++ `index.html` 将自动跳转到`/en`或 `/fa`
++ `Page2.html` 将自动跳转到对应多语言目录 `/en/Page2` / `fa/Page2`
++ `subfolder`
++ `subfolder`
+  + `Page3.html` 将自动跳转到对应多语言目录 `/en/subfolder/Page3` / `fa/subfolder/Page3`
++ `en.html`
++ `fa.html`
++ `en`
+  + `subfolder/Page3.html`
+  + `Page2.html`
++ `fa`
+  + `subfolder/Page3.html`
+  + `Page2.html`
