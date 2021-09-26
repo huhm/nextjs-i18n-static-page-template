@@ -1,5 +1,8 @@
 import { GetStaticProps } from "next";
 import React from "react";
+import imgPng from "../../assets/home/demo-png.png";
+import imgWebp from "../../assets/home/demo-webp.webp";
+import { ImgWebpFallback } from "../../components/ImgWebpFallback";
 import PageHeadMobile from "../../components/PageHeadMobile";
 import { classNameCombine } from "../../libs/className";
 import {
@@ -10,6 +13,7 @@ import {
 import LANGS_EN, { LangInfoHome } from "../../locales/home/en";
 import LANGS_FA from "../../locales/home/fa";
 import styles from "../../styles/Home.module.css";
+
 export const getStaticPaths = getStaticPathsForLang;
 
 type Prop = ILangStaticProps<LangInfoHome>;
@@ -53,6 +57,14 @@ const Home = (props: Prop) => {
       <div
         className={classNameCombine([styles.img, styles.imgPreferWebp])}
       ></div>
+
+      <p>Prefere use webp picture,by ImgWebpFallback component</p>
+      <ImgWebpFallback
+        src={imgWebp.src}
+        fallback={imgPng.src}
+        style={{ width: "120px" }}
+        alt="multi image example"
+      ></ImgWebpFallback>
     </div>
   );
 };
