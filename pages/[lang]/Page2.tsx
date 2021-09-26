@@ -39,6 +39,7 @@ const Home = (props: Prop) => {
     <div className={classNameCombine([styles.container, styles[nLocale]])}>
       <PageHeadMobile
         title={langs.title}
+        lang={props.language}
         dir={props.langDir}
         description={langs.desc}
       ></PageHeadMobile>

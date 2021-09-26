@@ -40,6 +40,7 @@ const Home = (props: Prop) => {
       <PageHeadMobile
         title={langs.title}
         dir={props.langDir}
+        lang={props.language}
         description={langs.desc}
       ></PageHeadMobile>
       <h3>{langs.title}</h3>
